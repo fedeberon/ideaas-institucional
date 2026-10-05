@@ -1,58 +1,49 @@
 import Image from "next/image";
 
+const services = [
+  ["Desarrollo a medida", "Aplicaciones web, portales B2B/B2C y sistemas internos alineados a tu operación."],
+  ["Integraciones & APIs", "Conectamos ERP, CRM, eCommerce, pasarelas de pago y servicios de terceros."],
+  ["Automatización e IA", "Automatizamos procesos repetitivos y aceleramos decisiones con IA aplicada."],
+  ["Consultoría tecnológica", "Diagnóstico, estrategia y acompañamiento para escalar equipos y plataformas."],
+];
+
+const steps = [
+  ["01", "Descubrimiento", "Objetivos, alcance, riesgos y priorización."],
+  ["02", "Diseño", "Arquitectura, UX y plan de entregas."],
+  ["03", "Construcción", "Sprints, QA continuo y feedback temprano."],
+  ["04", "Evolución", "Monitoreo, mejoras y roadmap vivo."],
+];
+
 const products = [
-  {
-    number: "01",
-    type: "Producto digital",
-    title: "Mirador del Plata",
-    description: "Una experiencia turística digital para descubrir Potrerillos, sus rutas y una forma distinta de habitar el paisaje.",
-    tags: ["Web", "Turismo", "Contenido"],
-    image: "/images/mirador-del-plata.jpg",
-    href: "#contacto",
-  },
-  {
-    number: "02",
-    type: "Plataforma a medida",
-    title: "Encuestas IJS",
-    description: "Una herramienta interna para cargar, consultar y convertir encuestas institucionales en decisiones visibles.",
-    tags: ["Next.js", "Datos", "Operaciones"],
-    image: null,
-    href: "#contacto",
-  },
+  { title: "Trego", text: "Conectamos cargas con transportistas que ya están en camino.", image: "/images/trego/trego-truck-hero.png", href: "https://trego-eta.vercel.app" },
+  { title: "FlowForge ChatOps", text: "Una forma simple y controlada de pedir cambios de software por chat.", image: "/images/ideaas-source/taggify.png", href: "#producto" },
+  { title: "Uniendo Sonrisas", text: "Gestión de socios y aportes mensuales para organizaciones que hacen la diferencia.", image: "/images/ideaas-source/camara.png", href: "https://uniendo-sonrisas.vercel.app" },
 ];
 
 export default function Home() {
   return (
     <main>
-      <nav className="nav shell" aria-label="Navegación principal">
-        <a className="brand" href="#inicio" aria-label="Ideaas, inicio"><span className="brand-mark">i</span><span>ideaas</span></a>
-        <div className="nav-links"><a href="#productos">Productos</a><a href="#metodo">Método</a><a href="#contacto">Contacto</a></div>
-        <a className="nav-cta" href="#contacto">Hablemos <span>↗</span></a>
-      </nav>
+      <header className="site-header"><div className="container header-inner"><a href="#inicio" className="logo-link"><Image src="/images/ideaas-source/ideaas-logo.png" alt="IDEEAS" width={260} height={57} priority /></a><nav className="desktop-nav"><a href="#servicios">Servicios</a><a href="#producto">Producto</a><a href="#metodologia">Metodología</a><a href="#casos">Casos</a><a href="#nosotros">Nosotros</a><a className="header-cta" href="#contacto">Agendar reunión</a></nav><a className="mobile-menu" href="#servicios">Menú</a></div></header>
 
-      <section className="hero shell" id="inicio">
-        <div className="hero-copy">
-          <p className="eyebrow"><span className="pulse" /> Estudio digital independiente</p>
-          <h1>Ideas que<br /><em>se vuelven</em><br />producto.</h1>
-          <p className="hero-lede">Diseñamos experiencias digitales claras, útiles y con carácter para organizaciones que quieren avanzar.</p>
-          <a className="button button-dark" href="#productos">Ver nuestros productos <span>↓</span></a>
-        </div>
-        <div className="hero-art" aria-label="Composición abstracta de Ideaas">
-          <div className="orbit orbit-one" /><div className="orbit orbit-two" /><div className="orb orb-main">i</div><div className="orb orb-small" /><div className="coordinate coordinate-one">34° 51&apos; 12.8&quot; S</div><div className="coordinate coordinate-two">58° 22&apos; 04.1&quot; O</div>
-        </div>
-      </section>
+      <section id="inicio" className="hero-source"><div className="container hero-grid"><div className="hero-copy-source"><p className="pill pill-amber">Producto estrella IDEEAS</p><h1>Nos pedís el servicio y te dejamos la web <span>lista para crecer</span></h1><p className="hero-lede-source">Te entregamos una web funcionando y, desde ahí, la vas haciendo crecer por chat cuando quieras. Ese chat está atendido por un <b>agente de IA</b> que transforma tus pedidos en cambios reales de forma automatizada.</p><p className="hero-note">Vos pedís el cambio en lenguaje simple, el agente lo procesa y nuestro equipo valida para publicarlo rápido y con control.</p><div className="hero-actions"><a className="button-source button-brand" href="#producto">Quiero mi web lista</a><a className="button-source button-outline" href="#contacto">Quiero una propuesta</a></div><div className="metrics"><div><strong>+40</strong><span>implementaciones</span></div><div><strong>+10</strong><span>años construyendo software</span></div><div><strong>SLA</strong><span>seguimiento y soporte continuo</span></div></div></div><div className="hero-image"><Image src="/images/ideaas-source/hero-bg.jpg" alt="Equipo trabajando en mejoras de software con acompañamiento continuo" fill sizes="(max-width: 800px) 100vw, 50vw" priority /></div></div></section>
 
-      <section className="intro-band"><div className="shell intro-grid"><p className="eyebrow">01 / Qué hacemos</p><p className="intro-statement">No empezamos por la tecnología. Empezamos por entender <span>qué tiene que cambiar.</span></p><p className="intro-note">Estrategia, diseño y desarrollo en un mismo equipo. De la primera pregunta a una solución que funciona.</p></div></section>
+      <section className="promise"><div className="container promise-card"><h2>Qué hacemos por tu empresa</h2><div className="promise-list"><span>✓ Discovery funcional y técnico</span><span>✓ Diseño de arquitectura y roadmap</span><span>✓ Desarrollo e integración de sistemas</span><span>✓ QA, puesta en producción y evolución continua</span></div><p>Trabajamos como partner de producto: objetivos claros, entregables medibles y comunicación constante.</p></div></section>
 
-      <section className="products shell" id="productos">
-        <div className="section-top"><div><p className="eyebrow">02 / Productos</p><h2>Lo que ya<br /><em>está pasando.</em></h2></div><p className="section-copy">Proyectos nacidos de problemas reales. Los convertimos en productos simples de usar, fáciles de entender y listos para crecer.</p></div>
-        <div className="product-list">{products.map((product) => <article className="product-card" key={product.number}><div className="product-visual">{product.image ? <Image src={product.image} alt="Paisaje de Mirador del Plata" fill sizes="(max-width: 800px) 100vw, 50vw" /> : <div className="data-visual"><div className="data-grid" /><span className="data-label">01 — captura</span><span className="data-label data-label-two">02 — entiende</span><div className="data-line" /></div>}<span className="product-number">{product.number}</span></div><div className="product-info"><p className="product-type">{product.type}</p><h3>{product.title}</h3><p>{product.description}</p><div className="product-footer"><div className="tags">{product.tags.map((tag) => <span key={tag}>{tag}</span>)}</div><a href={product.href} aria-label={`Conocer más sobre ${product.title}`}>Conocer más <span>↗</span></a></div></div></article>)}</div>
-      </section>
+      <section id="servicios" className="section-source"><div className="container"><div className="section-heading-source"><p className="kicker">Lo que hacemos</p><h2>Capacidades para mover tu negocio</h2><p>Desde una necesidad puntual hasta una transformación digital integral.</p></div><div className="service-grid">{services.map(([title, text]) => <article className="source-card" key={title}><h3>{title}</h3><p>{text}</p></article>)}</div></div></section>
 
-      <section className="method" id="metodo"><div className="shell method-grid"><div><p className="eyebrow">03 / Método</p><h2>Menos ruido.<br /><em>Más sentido.</em></h2></div><div className="method-steps"><div className="step"><span>01</span><div><h3>Miramos de cerca</h3><p>Nos metemos en el problema, hablamos con las personas y encontramos la oportunidad real.</p></div></div><div className="step"><span>02</span><div><h3>Damos forma</h3><p>Ordenamos lo complejo y lo convertimos en una experiencia que se puede entender.</p></div></div><div className="step"><span>03</span><div><h3>Lo hacemos posible</h3><p>Construimos, medimos y mejoramos hasta que el producto encuentra su lugar.</p></div></div></div></div></section>
+      <section id="ai-agentes" className="section-source section-muted"><div className="container split-source"><div><p className="pill pill-purple">Nuevo · AI Engineering</p><h2>Agentes de IA para desarrollo y control de calidad</h2><p>En IDEEAS incorporamos agentes de IA para asistir al equipo técnico en tareas de desarrollo, revisión de código y testing. Esto acelera entregas, mejora cobertura de pruebas y reduce errores antes de producción.</p><ul className="check-list"><li>Generación asistida de código y refactors controlados</li><li>Revisión técnica automática sobre PRs</li><li>QA inteligente: casos de prueba y regresión</li><li>Documentación técnica y trazabilidad de cambios</li></ul></div><div className="ai-visual"><span>AI</span><small>build · review · test</small></div></div></section>
 
-      <section className="contact shell" id="contacto"><div><p className="eyebrow">04 / Contacto</p><h2>¿Tenés una idea<br />dando vueltas?</h2></div><div className="contact-action"><p>Contanos qué querés mover. A veces una buena conversación es el primer prototipo.</p><a className="button button-accent" href="mailto:hola@ideaas.com.ar">hola@ideaas.com.ar <span>↗</span></a></div></section>
-      <footer className="footer shell"><a className="brand" href="#inicio"><span className="brand-mark">i</span><span>ideaas</span></a><p>Buenos Aires, Argentina · 2025</p><a href="#inicio">Volver arriba ↑</a></footer>
+      <section id="producto" className="section-source"><div className="container split-source"><div><p className="pill pill-cyan">Producto IDEEAS</p><h2>FlowForge ChatOps</h2><p>Un servicio-producto para que tu empresa pueda pedir cambios de software por chat, de forma simple y controlada. Vos describís lo que necesitás en lenguaje natural y nuestro sistema + equipo técnico lo transforma en implementación real.</p><ol className="number-list"><li><b>Pedido por chat:</b> el cliente escribe el cambio que necesita.</li><li><b>Análisis automático:</b> agentes de IA traducen el pedido a tareas técnicas.</li><li><b>Ejecución guiada:</b> el equipo valida, implementa y versiona.</li><li><b>Control de calidad:</b> testing funcional y revisión técnica.</li><li><b>Entrega y trazabilidad:</b> resultado, estado y evidencia de cada cambio.</li></ol><a className="button-source button-brand" href="#contacto">Quiero una demo</a></div><div className="chat-visual"><div className="chat-top">FlowForge <span>● online</span></div><div className="chat-bubble">Necesito agregar un reporte mensual con los indicadores de ventas.</div><div className="chat-bubble chat-response">Pedido analizado · 3 tareas creadas<br /><small>Frontend · Backend · QA</small></div><div className="chat-line" /></div></div></section>
+
+      <section id="metodologia" className="section-source section-muted"><div className="container"><div className="section-heading-source"><p className="kicker">Cómo trabajamos</p><h2>Metodología de trabajo</h2></div><div className="steps-grid">{steps.map(([number, title, text]) => <article className="step-card" key={number}><strong>{number}</strong><h3>{title}</h3><p>{text}</p></article>)}</div></div></section>
+
+      <section id="casos" className="section-source"><div className="container"><div className="section-heading-source"><p className="kicker">Productos y casos</p><h2>Software que ya está funcionando</h2><p>Algunos productos nacidos de problemas reales y construidos por IDEEAS.</p></div><div className="product-grid">{products.map((product) => <a className="product-card-source" href={product.href} key={product.title}><div className="product-image"><Image src={product.image} alt={product.title} fill sizes="(max-width: 800px) 100vw, 33vw" /></div><div className="product-card-copy"><h3>{product.title} ↗</h3><p>{product.text}</p></div></a>)}</div></div></section>
+
+      <section id="nosotros" className="section-source section-muted"><div className="container split-source about-source"><div><p className="kicker">IDEEAS</p><h2>Software Factory con mentalidad de consultora</h2><p>Entendemos el negocio, proponemos soluciones concretas y ejecutamos con foco en impacto.</p><p>Nos involucramos de punta a punta: estrategia, implementación y mejora continua.</p></div><div className="differential"><h3>Nuestro diferencial</h3><ul><li>Cercanía y comunicación clara con stakeholders.</li><li>Enfoque en resultados, no solo en features.</li><li>Buenas prácticas de arquitectura, QA y despliegue.</li><li>Equipo flexible para proyectos y staff augmentation.</li></ul></div></div></section>
+
+      <section id="contacto" className="contact-source"><div className="container contact-inner"><div><p className="kicker">¿Hablamos?</p><h2>Hablemos de tu proyecto</h2><p>Contanos en qué etapa estás y te proponemos el mejor camino.</p></div><a className="button-source button-brand" href="mailto:contacto@ideaas.com.ar?subject=Consulta web IDEEAS">contacto@ideaas.com.ar ↗</a></div></section>
+
+      <footer className="site-footer"><div className="container footer-inner"><span>© 2026 IDEEAS — Software Factory</span><div><a href="#servicios">Servicios</a><a href="#casos">Casos</a><a href="#contacto">Contacto</a></div></div></footer>
     </main>
   );
 }

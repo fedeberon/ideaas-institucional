@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Ideaas — Tecnología que toma forma",
-  description: "Ideaas diseña y desarrolla productos digitales para organizaciones que quieren avanzar.",
+  title: "IDEEAS — Software Factory para empresas que escalan",
+  description: "Software factory y consultoría tecnológica. Diseñamos, desarrollamos e integramos soluciones digitales para optimizar procesos y acelerar resultados de negocio.",
   icons: { icon: "/favicon.svg" },
 };
 
