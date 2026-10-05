@@ -4,7 +4,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "IDEEAS — Software Factory para empresas que escalan",
   description: "Software factory y consultoría tecnológica. Diseñamos, desarrollamos e integramos soluciones digitales para optimizar procesos y acelerar resultados de negocio.",
-  icons: { icon: "/favicon.svg" },
+  icons: { icon: "/images/ideaas-isotipo.png", shortcut: "/images/ideaas-isotipo.png", apple: "/images/ideaas-isotipo.png" },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
