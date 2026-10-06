@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { TregoCarousel } from "./components/TregoCarousel";
+import { ProcessContrastCarousel } from "./components/ProcessContrastCarousel";
 
 const services = [
   ["Desarrollo a medida", "Aplicaciones web, portales B2B/B2C y sistemas internos alineados a tu operación."],
@@ -34,7 +35,7 @@ export default function Home() {
 
       <section id="ai-agentes" className="section-source section-muted"><div className="container split-source"><div><p className="pill pill-purple">Nuevo · AI Engineering</p><h2>Agentes de IA para desarrollo y control de calidad</h2><p>En IDEEAS incorporamos agentes de IA para asistir al equipo técnico en tareas de desarrollo, revisión de código y testing. Esto acelera entregas, mejora cobertura de pruebas y reduce errores antes de producción.</p><ul className="check-list"><li>Generación asistida de código y refactors controlados</li><li>Revisión técnica automática sobre PRs</li><li>QA inteligente: casos de prueba y regresión</li><li>Documentación técnica y trazabilidad de cambios</li></ul></div><div className="ai-visual"><span>AI</span><small>build · review · test</small></div></div></section>
 
-      <section id="proceso" className="process-documentation"><div className="container"><div className="section-heading-source"><p className="kicker">Cómo trabajamos</p><h2>Del pedido al producto publicado</h2><p>Una comparación clara entre el flujo acompañado por IDEEAS y el proceso tradicional.</p></div><div className="process-image"><Image src="/images/ideaas-process-comparison.png" alt="Comparación entre el proceso de trabajo con IDEEAS y un proceso tradicional" fill sizes="(max-width: 800px) 100vw, 1160px" /></div></div></section>
+      <section id="proceso" className="process-documentation"><div className="container"><div className="section-heading-source"><p className="kicker">Cómo trabajamos</p><h2>Del pedido al producto publicado</h2><p>Una comparación clara entre el flujo acompañado por IDEEAS y el proceso tradicional.</p></div><ProcessContrastCarousel /></div></section>
 
       <section id="producto" className="trego-feature"><div className="container"><div className="trego-heading"><div><p className="pill pill-cyan">Producto principal IDEEAS</p><h2>Trego: logística que se mueve</h2><p>Conectamos personas y empresas que necesitan mover cosas con vehículos que ya están en camino. Más simple, más rápido y más eficiente.</p></div><a className="button-source button-brand" href="https://trego-eta.vercel.app" target="_blank" rel="noreferrer">Conocer Trego ↗</a></div><TregoCarousel /><div className="trego-flow"><article><strong>01</strong><h3>Publicá o buscá</h3><p>Publicá tu carga o explorá cargas disponibles.</p></article><article><strong>02</strong><h3>Conectá</h3><p>Chateá y acordá los detalles del viaje.</p></article><article><strong>03</strong><h3>Mové</h3><p>Seguí el viaje y recibí la confirmación.</p></article></div></div></section>
 
