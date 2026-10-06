@@ -1,0 +1,8 @@
+.hero-image {
+  background: #fff;
+}
+
+.hero-image img {
+  object-fit: contain;
+  object-position: center;
+}
