@@ -1,3 +1,11 @@
+.hero-grid {
+  grid-template-columns: 1fr;
+}
+
+.hero-copy-source {
+  max-width: 850px;
+}
+
 .hero-image {
   background: #fff;
 }
