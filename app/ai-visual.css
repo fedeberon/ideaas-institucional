@@ -1,0 +1,21 @@
+.ai-visual {
+  position: relative;
+  min-height: 340px;
+  overflow: hidden;
+  border-radius: 22px;
+  background: #eef8ff;
+  border: 1px solid #cfeeff;
+  box-shadow: 0 16px 40px rgba(14, 116, 144, .14);
+}
+
+.ai-visual img {
+  object-fit: contain;
+  object-position: center;
+  padding: 8px;
+}
+
+@media (max-width: 800px) {
+  .ai-visual {
+    min-height: 280px;
+  }
+}
