@@ -26,6 +26,7 @@ export function TregoCarousel() {
     <div className="trego-carousel" aria-label="Presentación de Trego">
       <div className="trego-showcase-copy">
         <div className="trego-carousel-top"><Image src="/images/trego/trego-logo.png" alt="Trego" width={150} height={41} /><span>{active + 1} / {slides.length}</span></div>
+        <div className="trego-carousel-tabs" role="tablist" aria-label="Tipo de explicación"><button type="button" className={active === 0 ? "active" : ""} onClick={() => setActive(0)} role="tab" aria-selected={active === 0}>Humano</button><button type="button" className={active === 1 ? "active" : ""} onClick={() => setActive(1)} role="tab" aria-selected={active === 1}>Técnico</button></div>
         <p className="trego-slide-label">{slide.label}</p>
         <h3>{slide.title}</h3>
         <p>{slide.body}</p>
